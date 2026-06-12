@@ -4,6 +4,7 @@ import { Suspense, lazy } from "react";
 import { motion } from "framer-motion";
 import { SectionCanvas } from "@/components/three/shared/SectionCanvas";
 import { MagneticButton } from "@/components/ui/magnetic-button";
+import { ErrorBoundary } from "@/components/ui/error-boundary";
 
 const HeroScene = lazy(() =>
   import("@/components/three/Hero/HeroScene").then((mod) => ({
@@ -15,11 +16,13 @@ export function HeroSection() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <SectionCanvas cameraPosition={[0, -0.3, 6]} cameraFov={50} sectionId="hero">
-          <Suspense fallback={null}>
-            <HeroScene />
-          </Suspense>
-        </SectionCanvas>
+        <ErrorBoundary>
+          <SectionCanvas cameraPosition={[0, -0.3, 6]} cameraFov={50} sectionId="hero">
+            <Suspense fallback={null}>
+              <HeroScene />
+            </Suspense>
+          </SectionCanvas>
+        </ErrorBoundary>
       </div>
 
       <div className="absolute bottom-0 inset-x-0 h-64 z-10 pointer-events-none" style={{ background: "linear-gradient(to top, #050505 0%, transparent 100%)" }} aria-hidden="true" />
