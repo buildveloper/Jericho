@@ -136,10 +136,30 @@
 }
 
 @utility text-gradient {
-  background: linear-gradient(135deg, var(--aurora-blue), var(--aurora-purple), var(--aurora-teal));
+  background: linear-gradient(135deg, #60A5FA, #A78BFA, #2DD4BF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* ===== Scanline film grain effect ===== */
+.scanlines {
+  position: relative;
+  overflow: hidden;
+}
+.scanlines::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.008) 2px,
+    rgba(255, 255, 255, 0.008) 3px
+  );
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* ===== Keyframe Animations ===== */

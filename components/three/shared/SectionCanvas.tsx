@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
@@ -29,20 +29,15 @@ export function SectionCanvas({
   sectionId,
 }: SectionCanvasProps) {
   const reducedMotion = useReducedMotion();
-  const { ref, isInView } = useIntersectionObserver({ threshold: 0, rootMargin: "200px" });
+  const { ref, isInView } = useIntersectionObserver<HTMLDivElement>({ threshold: 0, rootMargin: "200px" });
   const [shouldRender, setShouldRender] = useState(false);
 
-  // Mount once when visible, never unmount (avoids remount flicker)
   useEffect(() => {
     if (isInView) setShouldRender(true);
   }, [isInView]);
 
   return (
-    <div
-      ref={ref}
-      className={`relative w-full h-full ${className}`}
-      data-section-canvas={sectionId}
-    >
+    <div ref={ref} className={`relative w-full h-full ${className}`} data-section-canvas={sectionId}>
       {shouldRender ? (
         <Suspense fallback={<CanvasFallback />}>
           <Canvas
@@ -50,7 +45,7 @@ export function SectionCanvas({
             dpr={[1, 1.5]}
             gl={{
               powerPreference: "high-performance",
-              antialias: true,
+              antialias: false,
               alpha: false,
             }}
             performance={{ min: 0.5 }}
