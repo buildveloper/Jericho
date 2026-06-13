@@ -5,10 +5,11 @@ import { AuroraBackground } from "@/components/effects/AuroraBackground";
 import { ParticleCursor } from "@/components/effects/ParticleCursor";
 import { ScrollProgressBar } from "@/components/effects/ScrollProgressBar";
 import { HeroSection } from "@/components/sections/HeroSection";
-import { BlockchainUniverseSection } from "@/components/sections/BlockchainUniverseSection";
-import { CrossChainSection } from "@/components/sections/CrossChainSection";
-import { EcosystemSection } from "@/components/sections/EcosystemSection";
-import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
+import { StoreSection } from "@/components/sections/StoreSection";
+import { SwapSection } from "@/components/sections/SwapSection";
+import { CryptoCardSection } from "@/components/sections/CryptoCardSection";
+import { AirtimeSection } from "@/components/sections/AirtimeSection";
+import { FinalCTASection } from "@/components/sections/FinalCTASection";
 
 export default function Home() {
   return (
@@ -19,10 +20,11 @@ export default function Home() {
       <Navbar />
       <main className="relative z-10">
         <HeroSection />
-        <BlockchainUniverseSection />
-        <CrossChainSection />
-        <EcosystemSection />
-        <TestimonialsSection />
+        <StoreSection />
+        <SwapSection />
+        <CryptoCardSection />
+        <AirtimeSection />
+        <FinalCTASection />
       </main>
       <Footer />
     </SmoothScroll>
