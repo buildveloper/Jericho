@@ -1,17 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MagneticButton } from "@/components/ui/magnetic-button";
 
 export function FinalCTASection() {
   return (
-    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
-      {/* Aurora accent gradient background */}
+    <section className="relative min-h-[80vh] w-full flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <div
           className="absolute inset-0"
           style={{
-            background: "radial-gradient(ellipse 80% 50% at 50% 50%, rgba(59,130,246,0.08) 0%, rgba(139,92,246,0.04) 40%, transparent 70%)",
+            background:
+              "radial-gradient(ellipse 80% 50% at 50% 50%, rgba(59,130,246,0.1) 0%, rgba(139,92,246,0.05) 40%, transparent 70%)",
           }}
           aria-hidden="true"
         />
@@ -27,7 +26,7 @@ export function FinalCTASection() {
         />
       </div>
 
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto py-32">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -35,40 +34,16 @@ export function FinalCTASection() {
           transition={{ duration: 0.8 }}
         >
           <motion.h2
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-gradient mb-6 leading-tight"
-            initial={{ opacity: 0, y: 40 }}
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-extrabold text-white leading-[0.95] tracking-tight"
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
           >
-            Jericho Wallet….
+            Jericho Wallet&hellip;.
             <br />
-            beyond borders.
+            <span className="text-gradient">beyond borders.</span>
           </motion.h2>
-
-          <motion.p
-            className="text-sm sm:text-base md:text-lg text-white/40 max-w-lg mx-auto font-light leading-relaxed mb-10"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          >
-            Built for Nigeria, ready for the world.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.35, ease: "easeOut" }}
-          >
-            <MagneticButton
-              className="glass-panel px-10 py-4 text-base font-medium text-white/80 hover:text-white hover:bg-white/5 rounded-xl"
-              ariaLabel="Get started for free with Jericho Wallet"
-            >
-              Get Started for Free
-            </MagneticButton>
-          </motion.div>
         </motion.div>
       </div>
     </section>
