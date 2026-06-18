@@ -31,16 +31,14 @@ export function Navbar() {
       >
         <div className="flex items-center justify-between px-5 py-3">
           <Link href="/" className="flex items-center gap-2.5 group" aria-label="Jericho Wallet home">
-            <div className="relative h-9 w-9 sm:h-10 sm:w-10 overflow-hidden rounded-lg">
-              <Image
-                src="/images/jericho-logo.jpg"
-                alt="Jericho Wallet logo"
-                width={40}
-                height={40}
-                priority
-                className="h-full w-full object-cover"
-              />
-            </div>
+            <Image
+              src="/images/jericho-logo.jpg"
+              alt="Jericho Wallet logo"
+              width={36}
+              height={36}
+              priority
+              className="h-9 w-9 sm:h-10 sm:w-10 rounded-md object-contain"
+            />
           </Link>
 
           <div className="hidden md:flex items-center gap-6">

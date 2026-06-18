@@ -158,9 +158,9 @@ export function HeroSection() {
           {["NGN Support", "Multi-Chain", "Bank-Grade Security"].map((signal) => (
             <span
               key={signal}
-              className="text-[10px] sm:text-xs text-white/25 font-medium uppercase tracking-widest flex items-center gap-1.5"
+              className="text-[10px] sm:text-xs text-white font-medium uppercase tracking-widest flex items-center gap-1.5"
             >
-              <span className="w-1 h-1 rounded-full bg-aurora-blue/50 inline-block" />
+              <span className="w-1 h-1 rounded-full bg-aurora-blue inline-block" />
               {signal}
             </span>
           ))}
