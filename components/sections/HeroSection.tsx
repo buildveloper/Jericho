@@ -4,7 +4,6 @@ import { Suspense, lazy } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { SectionCanvas } from "@/components/three/shared/SectionCanvas";
-import { MagneticButton } from "@/components/ui/magnetic-button";
 import { ErrorBoundary } from "@/components/ui/error-boundary";
 
 const HeroScene = lazy(() =>
@@ -130,30 +129,10 @@ export function HeroSection() {
         </motion.div>
 
         <motion.div
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10 md:mt-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.1, ease: "easeOut" }}
-        >
-          <MagneticButton
-            className="glass-panel px-8 py-3.5 text-sm font-semibold text-white hover:bg-white/10 rounded-xl"
-            ariaLabel="Create your Jericho Wallet"
-          >
-            Create Wallet
-          </MagneticButton>
-          <MagneticButton
-            className="px-8 py-3.5 text-sm font-medium text-white/60 hover:text-white rounded-xl"
-            ariaLabel="Watch a demo of Jericho Wallet"
-          >
-            Watch Demo
-          </MagneticButton>
-        </motion.div>
-
-        <motion.div
           className="flex items-center justify-center gap-6 mt-10 flex-wrap"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1.4 }}
+          transition={{ duration: 0.6, delay: 1.1 }}
         >
           {["NGN Support", "Multi-Chain", "Bank-Grade Security"].map((signal) => (
             <span
