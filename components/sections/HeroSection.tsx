@@ -41,13 +41,13 @@ export function HeroSection() {
           transition={{ staggerChildren: 0.15, delayChildren: 0.1 }}
         >
           <motion.h1
-            className="text-[clamp(3.5rem,10vw,8rem)] font-display font-bold text-white leading-none mb-4 tracking-tight"
+            className="text-[clamp(3.5rem,10vw,8rem)] font-display font-bold leading-none mb-4 tracking-tight"
             variants={{
               hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
             }}
           >
-            JERICHO
+            <span className="text-gradient">JERICHO</span>
           </motion.h1>
 
           <motion.p

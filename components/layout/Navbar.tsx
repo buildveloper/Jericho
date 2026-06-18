@@ -41,9 +41,6 @@ export function Navbar() {
                 className="h-full w-full object-cover"
               />
             </div>
-            <span className="font-display font-semibold text-sm text-white/80 group-hover:text-white transition-colors hidden sm:inline">
-              Jericho
-            </span>
           </Link>
 
           <div className="hidden md:flex items-center gap-6">
