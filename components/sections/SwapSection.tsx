@@ -135,13 +135,13 @@ export function SwapSection() {
             </motion.span>
 
             <motion.h2
-              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-extrabold text-white leading-[0.95] tracking-tight mb-6"
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-extrabold leading-[0.95] tracking-tight mb-6"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.9, ease: "easeOut" }}
             >
-              SWAP
+              <span className="text-gradient">SWAP</span>
             </motion.h2>
 
             <motion.p
