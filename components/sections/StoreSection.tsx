@@ -75,7 +75,7 @@ export function StoreSection() {
             </motion.h2>
 
             <motion.p
-              className="text-base sm:text-lg md:text-xl text-white/50 max-w-xl font-light leading-relaxed"
+              className="text-lg sm:text-xl md:text-2xl text-white font-light leading-relaxed max-w-xl"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

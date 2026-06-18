@@ -1,6 +1,8 @@
 import type { NavLink, FooterLink } from "@/types";
 
 export const NAV_LINKS: NavLink[] = [
+  { label: "Buy", href: "#buy" },
+  { label: "Sell", href: "#sell" },
   { label: "Store", href: "#store" },
   { label: "Swap", href: "#swap" },
   { label: "Card", href: "#card" },

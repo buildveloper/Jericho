@@ -51,7 +51,7 @@ export function HeroSection() {
           </motion.h1>
 
           <motion.p
-            className="text-sm sm:text-base md:text-lg lg:text-xl text-white/60 max-w-2xl mx-auto font-light mb-3"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-2xl mx-auto font-light mb-4"
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
@@ -61,7 +61,7 @@ export function HeroSection() {
           </motion.p>
 
           <motion.p
-            className="text-sm sm:text-base md:text-lg text-white/40 max-w-xl mx-auto font-light leading-relaxed"
+            className="text-base sm:text-lg md:text-xl text-white/85 max-w-xl mx-auto font-light leading-relaxed"
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
@@ -107,7 +107,7 @@ export function HeroSection() {
                   aria-hidden="true"
                 />
                 <Image
-                  src="/images/jericho-app-homepage.jpeg"
+                  src="/images/jericho-app-homepage.png"
                   alt="Jericho Wallet mobile app homepage"
                   width={1080}
                   height={2400}
